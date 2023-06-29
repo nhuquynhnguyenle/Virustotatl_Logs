@@ -1,0 +1,17 @@
+1688041459.230    174 192.168.1.129 TCP_MISS/200 89509 GET https://connect.facebook.net/signals/config/1634413043451608? - HIER_DIRECT/31.13.75.13 application/x-javascript
+1688041459.238     69 192.168.1.129 TCP_MISS/200 745 GET https://www.google.com.vn/pagead/1p-user-list/947481767/? - HIER_DIRECT/142.251.220.35 image/gif
+1688041459.312     63 192.168.1.129 TCP_MISS/200 682 GET https://www.google.com.vn/ads/ga-audiences? - HIER_DIRECT/142.251.220.35 image/gif
+1688041459.339     92 192.168.1.129 TCP_MISS/200 682 GET https://www.google.com/ads/ga-audiences? - HIER_DIRECT/172.217.24.68 image/gif
+1688041459.343    114 192.168.1.129 TCP_MISS/200 664 GET https://script.crazyegg.com/pages/data-scripts/0017/3880/sampling/www.thegioididong.com.json? - HIER_DIRECT/104.19.148.8 application/json
+1688041459.381    104 192.168.1.129 NONE_NONE/200 0 CONNECT www.facebook.com:443 - HIER_DIRECT/31.13.75.35 -
+1688041459.434     51 192.168.1.129 TCP_MISS/200 453 GET https://www.facebook.com/tr/? - HIER_DIRECT/31.13.75.35 text/plain
+1688041459.544     43 192.168.1.129 NONE_NONE/200 0 CONNECT img.tgdd.vn:443 - HIER_DIRECT/103.48.76.205 -
+1688041459.559     62 192.168.1.129 TCP_MISS/200 118459 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/262650/samsung-galaxy-a23-cam-thumb-600x600.jpg - HIER_DIRECT/103.48.76.205 image/webp
+1688041459.590     44 192.168.1.129 TCP_MISS/200 40117 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/7264/239794/elle-ell25051-nu-thumb-600x600.jpg - HIER_DIRECT/103.48.76.205 image/webp
+1688041459.591     30 192.168.1.129 TCP_MISS/200 46792 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/57/217431/sac-du-phong-10000mah-type-c-xmobile-pj-jp190st-thumb-600x600.jpeg - HIER_DIRECT/103.48.76.205 image/webp
+1688041459.609    204 192.168.1.129 NONE_NONE/200 0 CONNECT tracking.crazyegg.com:443 - HIER_DIRECT/13.251.191.90 -
+1688041459.617     68 192.168.1.129 NONE_NONE/200 0 CONNECT img.tgdd.vn:443 - HIER_DIRECT/103.48.76.205 -
+1688041459.667     56 192.168.1.129 TCP_MISS/200 315 GET https://tracking.crazyegg.com/clock? - HIER_DIRECT/13.251.191.90 text/plain
+1688041459.882     50 192.168.1.129 TCP_MISS/200 59631 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/7264/217883/mvw-ms023-01-nam-1-600x600.jpg - HIER_DIRECT/103.48.76.205 image/webp
+1688041459.882     50 192.168.1.129 TCP_MISS/200 59631 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/7264/217883/mvw-ms023-01-nam-1-600x600.jpg - HIER_DIRECT/103.48.76.205 image/webp
+1688041459.882     50 192.168.1.129 TCP_MISS/200 59631 GET https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/7264/217883/mvw-ms023-01-nam-1-600x600.jpg - HIER_DIRECT/103.48.76.205 image/webp
