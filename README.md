@@ -1,1 +1,1 @@
-# Virustotatl_Logs
+# Virustotal_Logs
