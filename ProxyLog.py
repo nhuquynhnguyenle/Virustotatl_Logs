@@ -1,7 +1,8 @@
 #
 class ProxyLog:
+    
     #
-    def __init__(self, time, port, ip, connection_type, size, method, url, contenttype, domain):
+    def __init__(self, time, port, ip, connection_type, size, method, url, contenttype, domain, destIP):
         self.Time = time
         self.Port = port
         self.IP = ip
@@ -11,4 +12,4 @@ class ProxyLog:
         self.URL = url
         self.ContentType = contenttype
         self.Domain = domain
-
+        self.DestinateIP = destIP
