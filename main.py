@@ -50,6 +50,7 @@ def readFile(file_path):
         except KeyboardInterrupt:
             print("\n")
             break
+
 #
 def getDictionaryLogs():
     dict_logs = management.getUnique_IP_Log(management.proxy_logs)
@@ -58,11 +59,15 @@ def getDictionaryLogs():
 
 #
 def alertDangerDomain(domain):
-    with open(".manual", "r") as f:
-        monitored_domain = f.read().splitlines()
-        if domain in monitored_domain:
-            return True
-
+    try:
+        with open(".manual", "r") as f:
+            monitored_domain = f.read().splitlines()
+            if domain in monitored_domain:
+                return True
+    except FileNotFoundError:
+        print("File '.manual' not found.")
+    
+    return False
 #
 def getCursorAndConnect():
     try:
@@ -75,12 +80,15 @@ def getCursorAndConnect():
 
 #
 def checkAlert(dict_logs):
+    has_dangerous_domain = False
     for log in dict_logs.values():
-        if alertDangerDomain(log.Domain) != True:
-            return "\nDangerous domain access not found."
-        else:
-            return f"\nAlert: Have access into {log.Domain}"
-
+        if alertDangerDomain(log.Domain) == True:
+            print(f"\nAlert: Have access into {log.Domain}")
+            has_dangerous_domain = True 
+    if not has_dangerous_domain:
+        print("\nDangerous domain access not found.")
+                   
+#
 def main():
     readFile(file_path)
     connect,cursor = getCursorAndConnect()
@@ -93,7 +101,7 @@ def main():
         score = virustt.get_score(scan_id,api_key)
         controldb.addValue(log,score,cursor)
         management.writeAccess_Log_Into_File(log,score)
-    print(checkAlert(dict_logs))
+    checkAlert(dict_logs)
     connect.commit()
     connect.close()
     
