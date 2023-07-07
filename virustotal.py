@@ -1,6 +1,9 @@
 import requests
 import json
+import os
+
 class virustotal:
+    
     #Method getting value API_KEY in configure.json file
     def getJsonKey(self):
         file_path = 'configure.json'
@@ -49,4 +52,6 @@ class virustotal:
             #Remove timestamps appended after url id
                 scan_id = scan_id.split('-')[0]
                 return scan_id
+    
+    
 

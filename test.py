@@ -2,10 +2,10 @@
 import os
 import time
 import subprocess
-from ProxyLog import ProxyLog
-from log_management import log_management
+import time
 import json
-from virustotalDB import controlDB
+from log_management import log_management
+from ControlDB import controlDB
 from virustotal import virustotal
 
 log_file = '/var/log/squid/access.log'
@@ -42,8 +42,31 @@ def readFile():
     except PermissionError:
         print("Permission denied")
 
+#
+def getDictionaryLogs():
+    dict_logs = management.getUnique_IP_Log(management.proxy_logs)
+    dict_logs = management.filterURL(dict_logs)
+    return dict_logs
+
+#
+def alertDangerDomain(domain):
+    with open(".manual", "r") as f:
+        monitored_domain = f.read().splitlines()
+        if domain in monitored_domain:
+            return f"Alert: Have access into {domain}"
+
+
+
 def main():
     readFile()
+    dict_logs = getDictionaryLogs()
+    management.printInfo(dict_logs)
+    api_key = virustt.getJsonKey()
+    for log in dict_logs.values():
+        scan_id = virustt.scan_url(log.URL,api_key)
+        score = virustt.get_score(scan_id,api_key)
+        management.writeAccess_Log_Into_File(log,score)
+        print(alertDangerDomain(log.domain))
 
 if __name__ == '__main__':
     main()
